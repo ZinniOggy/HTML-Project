@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function its() {
+    document.getElementById("dem").innerHTML = "FAREWELL, 2024!!";
+}
+
+function myfunc() {
+    document.getElementById("course").innerHTML = "OH! WELCOME TO 2025!";
+}
+
+function gift() {
+    document.getElementById("giftBox").src = "letteropen.jpg"; // Update with the correct image for the open gift.
+    document.getElementById("message").innerHTML = "CONGRATULATIONS! A NEW BEGINNING!";
+}
+</script>
+
+<style>
+/* General Page Styling */
+body {
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrollbars for animation */
+}
+
+/* Title Styling */
+h1 {
+    color: mediumaquamarine;
+    font-family: cursive;
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+    width: 20%;
+    height: 50px;
+    color: black;
+    font-family: fantasy;
+    text-align: center;
+    background-color: cornflowerblue;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: lightblue;
+}
+
+/* Background Styling */
+#tt {
+    background-image: url("pop.png"), url("pep.png");
+    background-position: center, center;
+    background-repeat: repeat, repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+/* Star Styling */
+.star {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url("star.jpg"); /* Replace with your star image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveCorner 5s infinite alternate ease-in-out;
+}
+
+/* Corner Positions */
+#topLeft {
+    top: 10px;
+    left: 10px;
+}
+
+#topRight {
+    top: 10px;
+    right: 10px;
+}
+
+#bottomLeft {
+    bottom: 10px;
+    left: 10px;
+}
+
+#bottomRight {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Animation Keyframes */
+@keyframes moveCorner {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px);
+    }
+    100% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+/* Gift Container Styling */
+#giftContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#giftBox {
+    width: 280px;
+    height: 280px;
+    cursor: grab;
+}
+
+#message {
+    font-family: fantasy;
+    font-size: 20px;
+    color: gold;
+}
+</style>
+</head>
+<body>
+<div id="tt">
+    <h1>THE YEAR</h1>
+
+    <p id="dem" style="color: darkorange; text-align: center;"></p>
+    <button type="button" onclick="its()">Tap</button>
+
+    <p id="course" style="color: darkorange; text-align: center; font-family: sans-serif; text-decoration-style: dotted;">NOTHING CHANGED?</p>
+    <button type="button" onclick="myfunc()">Tap Once More??</button>
+
+    <div id="giftContainer">
+        <img id="giftBox" src="letterclose.jpg" onclick="gift()" alt="Gift Box">
+        <p id="message">READ ME!!</p>
+    </div>
+</div>
+
+<!-- Corner Animations -->
+<div id="topLeft" class="star"></div>
+<div id="topRight" class="star"></div>
+<div id="bottomLeft" class="star"></div>
+<div id="bottomRight" class="star"></div>
+
+</body>
+</html>
