@@ -78,12 +78,16 @@ function myfunc(){
 document.getElementById("course").innerHTML="OH! WELCOME to 2025"
  
 }
+function gift(){
+    document.getElementById("giftBox").src="letterop.jpg";
+    document.getElementById("message").innerHTML = "2025"
+
+}
 </script>
 <button type="button" onclick="myfunc()" style = "width: 20%;height:50px;color :black;font-family:fantasy;text-align:center;background-color:cornflowerblue;">Tap Once More??</button>
 <div id="giftContainer">
 <img id="giftBox" src="letterclose.jpg" onclick="gift()">
 <p id="message">READ ME!!</p>
-<script src="gift.js"></script>
 </div>
 </div>
 <div id="topLeft" class="star"></div>
